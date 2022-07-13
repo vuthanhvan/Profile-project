@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg1 : #9b59b6;
+    --bg2 : #3498db;
+    --bg3 : #d7e1ec;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(var(--bg1), var(--bg2));
+    transition: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+.container:hover{
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    background: linear-gradient(var(--bg1), var(--bg2));
+} 
+.container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: 0.3s;
+} 
+.container img.active{
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    margin:0;
+}
+.container h2{
+    color: #fff;
+}
+.container p{
+    color: #fff;
+    margin: 0 30px 12px;
+}
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 12px;
+}
+.btn-container button{
+    height: 35px;
+    width: 150px;
+    border: none;
+    margin-right: 12px;
+    border-radius: 5px;
+}
+.btn-container button:hover{
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+.icon-social{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 12px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 0.8s;
+}
+.container:hover .icon-social{
+    transform: translateX(0px);
+    opacity: 1;
+    
+}
+.icon-social i{
+    padding: 12px;
+    color: #fff;
+    background-color: #166bc6;
+    border-radius: 50%;
+    margin: 5px 0 0 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icon-social i:hover{
+    transform: scale(0.95);
+    transition: 0.3s;
+
+}
